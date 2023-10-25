@@ -13,7 +13,7 @@ class _ColumnStateState extends State<ColumnState> {
   var activeDice="assets/images/dice-1.png";
   Random r =Random();
   void rollDice(){
-    int next= r.nextInt(6)+1;
+    int next= r.nextInt(6);
     setState(() {
       activeDice="assets/images/dice-$next.png";
     });
@@ -31,7 +31,7 @@ class _ColumnStateState extends State<ColumnState> {
         TextButton(
           onPressed: rollDice,
           child: const Text(
-            "Click me !",
+            "Roll the dice ",
             style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
